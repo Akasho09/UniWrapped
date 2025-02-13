@@ -1,9 +1,19 @@
-
+import { Signup } from './pages/signup'
+import { BrowserRouter,Route,Routes } from 'react-router-dom'
+import { Signin } from './pages/signin'
 import './App.css'
 
 function App() {
 
-  return (<div className='bg-red-500 m-12 h-10 w-10 font-bold text-red-400'>Hi there</div>)
+  return (
+    <> <BrowserRouter>
+    <Routes>
+    <Route path="/signup" element={<Signup />} />
+    <Route path="/signin" element={<Signin />} />
+    </Routes>
+    </BrowserRouter>
+    </>
+    )
 }
 
 
